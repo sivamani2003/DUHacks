@@ -4,15 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HealthCare ChatBot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #007bff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form,.form {
+            padding-top: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+            form {
+                max-width: 90%;
+            }
+            .card-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+               
+                width: 90%;
+                margin-bottom: 20px;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+        @media screen and (min-width: 601px) {
+            .card-container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .card {
+                width: calc(25% - 20px); /* Adjust according to your spacing preferences */
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
 </head>
 <body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
     <h1>Welcome to HealthCare ChatBot</h1>
-    <form action="/result" method="POST">
+    <form class="form" action="/result" method="POST">
         <label for="symptoms_exp">Enter your symptoms:</label><br>
         <input type="text" id="symptoms_exp" name="symptoms_exp"><br>
         <label for="num_days">Number of days you've experienced symptoms:</label><br>
         <input type="number" id="num_days" name="num_days"><br><br>
         <input type="submit" value="Submit">
     </form>
+   
+    <div class="card-container">
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>This is the content of card 1.</p>
+        </div>
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>This is the content of card 2.</p>
+        </div>
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>This is the content of card 3.</p>
+        </div>
+        <div class="card">
+            <h2>Card 4</h2>
+            <p>This is the content of card 4.</p>
+        </div>
+    </div>
 </body>
 </html>
